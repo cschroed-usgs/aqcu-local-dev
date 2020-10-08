@@ -82,11 +82,11 @@
         executor="tomcatThreadPool"
         clientAuth="false"
         SSLEnabled="true"
-        SSLProtocol="TLS"
+        SSLProtocol="TLSv1.2"
         SSLCipherSuite="ALL:!LOW:!EXP:!SSLv2"
         keystoreFile="POINT_ME_TO_FULL_PATH_OF_KEYSTORE" 
         keystorePass="changeit"
-        SSLPassword="NONE"
+        SSLPassword="changeit"
         SSLVerifyClient="none"
         scheme="https"
         secure="true"
@@ -105,6 +105,7 @@
         pollTime="2000"
         pollerSize="8192"
         tomcatAuthentication="true"
+	address="0.0.0.0" secretRequired="false"
     />
 
     <!-- An Engine represents the entry point (within Catalina) that processes
